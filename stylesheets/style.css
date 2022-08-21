@@ -1,0 +1,458 @@
+
+
+/* #Reset & Basics (Inspired by E. Meyers)
+================================================== */
+	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline; }
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+		display: block; }
+	body {
+		line-height: 1; }
+	ol, ul {
+		list-style: none; }
+	blockquote, q {
+		quotes: none; }
+	blockquote:before, blockquote:after,
+	q:before, q:after {
+		content: '';
+		content: none; }
+	table {
+		border-collapse: collapse;
+		border-spacing: 0; }
+		
+		
+/* #Basic Styles
+================================================== */
+	html {
+
+		}
+
+	body { 
+	background-image: url(../images/background-mosaic.jpeg), url(../images/bg.png);
+	background-repeat:  repeat-x, repeat;
+		font: 16px/24px garamond, georgia, serif;
+		color: #565656; 
+		position: relative;
+		
+}
+
+	::-moz-selection {
+       background-color: #000;
+       color: #fff;
+}
+
+	::selection {
+       background-color: #000;
+       color: #fff;
+}
+	
+
+/* #Typography
+================================================== */
+
+
+	h2, h3, h4, h5, h6 { 
+		color: #353534; 
+		font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-weight: normal; 
+		font-variant: normal;
+}
+
+
+
+
+	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+	
+	h1, .h1 { 
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #ffffff;
+	font-size: 40px; 
+    line-height: 50px; 
+	margin: 0 auto 14px; 
+	padding: 12px 0; 
+	font-style:italic;
+	font-weight: 900;
+	}
+	
+	h2, .h2 { 
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 35px; 
+	line-height: 45px; 
+	margin: 15px 10px;  
+	text-align: left; 
+	padding: 12px 0; 
+	font-weight: 900;
+    font-style: italic;
+	color: #444; }
+	
+	h3, .h3 { 
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+	font-size: 21px; 
+	line-height: 20px; 
+	margin: 20px 10px; 
+	text-align: left; 
+	padding: 0px; 
+	color: #444; 
+	text-transform: none; 
+	font-weight: 900;
+    font-style: italic;
+	
+	}
+	
+	
+
+	.subheader { color: #777; }
+
+	p { 
+	font-family: garamond, georgia, serif; 
+	margin: 0 10px 20px 10px; 
+	font-style: normal; 
+	text-align: left; 
+	}
+	
+	
+.button	{
+		margin: 0 10px 20px 10px; 
+	}
+	
+	
+	p img { margin: 0; }
+	p.lead { font-size: 21px; line-height: 27px; color: #777;  }
+	
+	em { font-style: italic; }
+	strong { font-weight: bold; color: #333; }
+	small { font-size: 80%; }
+	
+	
+	p.disclaimer {
+		font-size: 12px;
+		font-style: italic;
+		color: #777;
+		margin-top: 0px;
+	}
+	
+.sidebar {
+	border-top: 1px solid #FFF;
+	border-bottom: 1px solid #FFF;
+	margin-bottom: 30px;
+}
+
+
+
+
+#nav {
+	text-align: left;
+	margin:  20px 0px 20px 0px;
+
+}
+#nav ul {
+    display: block;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 900;
+    font-style: italic;
+    margin: 0 auto;
+
+
+}
+#nav ul li {
+    display: block;
+    margin-bottom: 7px;
+
+
+}
+#nav ul li a, nav ul li a:visited, nav ul li a:active {
+    border-radius: 2px 2px 2px 2px;
+    color: #FFFFFF;
+    font-size: 19px;
+    position: relative;
+    text-decoration: none;
+}
+
+#nav ul li.first {
+    padding-left: 0;
+}
+
+#nav ul li.last {
+    border-right: none;
+    padding-right: 0;
+}
+
+#nav ul li a:hover, nav ul li a:focus {
+    color: #CFC493;
+}
+
+#nav ul li.current_page_item a {
+    color: #CFC493;
+}
+#nav ul li.current_page_ancestor a {
+    color: #CFC493;
+}
+	
+
+
+
+
+
+
+
+
+/* #Links
+================================================== */
+	a, a:visited { color: #000; text-decoration: none; outline: 0; -webkit-transition: color 0.3s ease-out 0s; -moz-transition: color 0.3s ease-out 0s; -o-transition: color 0.3s ease-out 0s; transition: color 0.3s ease-out 0s;  }
+	a:hover, a:focus { color: #CFC493; }
+	p a, p a:visited { line-height: inherit; }
+
+
+
+	
+	
+/* #Site Styles
+================================================== */
+
+div.container {
+    padding: 10px 0;
+	z-index: 1;
+}
+
+div.section {
+   overflow: hidden;
+}
+
+div.section img {
+   height: auto;
+   max-width: 100%;
+   margin-bottom: 10px;
+}
+
+
+
+.xmas {
+   position: relative;
+   height: 100%;
+}
+
+.xmas .details {
+   text-align: center;
+   background-color: #d50f44;
+   background-color: rgba(213, 15, 68, 1.0);
+   color: #fff;
+   opacity: 0;
+   position: absolute;
+   top: 0;
+   left: 0;
+   -webkit-transition: 0.25s ease-in;
+   -moz-transition: 0.25s ease-in;
+   -o-transition: 0.25s ease-in;
+   transition: 0.25s ease-in;
+   min-height: 20%;
+   width: 100%;
+}
+
+.no-opacity .xmas .details {
+   text-align: center;
+   background: none;
+   min-height: 50%;
+   width: 100%;
+   top: -9999px;
+}
+
+.xmas:hover .details {
+   margin-top: 0;
+   opacity: .9;
+}
+
+.xmas .details h3, .h3 { 
+   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  	font-weight: 900;
+    font-style: italic;
+   color: #fff; 
+   font-size: 36px; 
+   line-height: 40px;
+   letter-spacing: 1px; 
+   margin: 0 auto 20px;
+   text-transform: uppercase; 
+   text-align: center; 
+   padding: 27px 0 5px; 
+   border: none; 
+}
+
+.xmas .details h3 a { 
+   font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  	font-weight: 900;
+    font-style: italic;
+   color: #fff; 
+   font-size: 36px; 
+   line-height: 40px;
+   letter-spacing: 1px; 
+
+   text-transform: uppercase; 
+   text-align: center; 
+   padding: 27px 0; 
+   border: none; 
+}
+
+.xmas .details h3 a:hover { 
+
+   color: #CFC493; 
+ 
+}
+
+.xmas .details p { 
+   font-size: 18px; 
+   text-align: center;
+}
+
+
+/* #Footer
+================================================== */
+
+.hrrule {
+
+margin: 0;
+position: relative;
+height: 0;
+border-top: 1px solid #DDD;
+border-bottom: 1px solid white;
+z-index: -99;
+
+}
+
+.footer {
+background: url(../images/bg.png) repeat;
+}
+
+.footer p {
+margin: 0px 0px 0px 20px;
+}
+
+.footer a{
+color: #565656; 
+}
+
+.wrap {
+	max-width: 960px;
+	margin: 0px auto;  
+	background: #fff;
+
+}
+
+p.clicker {
+background: url(../images/bull-bullet.gif) top left no-repeat;
+padding-left: 25px;
+
+}
+
+
+ul {
+margin: 0px 40px;
+}
+
+
+
+ul.bull{
+list-style-image: url(../images/bull-bullet.gif);
+margin: 20px 40px;
+}
+
+ul.bull li {
+padding: 0px 0px 7px 0px;
+}
+
+
+hr { 
+border: solid #ddd; 
+border-width: 1px 0 0; 
+clear: both; 
+height: 0; 
+margin: 5px 10px;}
+
+
+div.program img {
+   height: auto;
+   max-width: 100%;
+   margin: 0px 7px;
+   padding-bottom: 25px;
+}
+
+
+div.program  h3{
+margin-bottom: 5px;
+}
+
+div.program  h3 a{
+color: #444;
+}
+
+div.program  h3 a:hover{
+color: #CFC493;
+}
+
+
+
+
+.sidez {
+background: #f9f9f9;
+width: 290px !important;
+border: 1px solid #dedede;
+margin: 4px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+
+
+form.stemapp {
+background: #f9f9f9;
+border: 1px solid #dedede;
+padding: 10px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+
+
+table.stemapp {
+background: #f9f9f9;
+border: 1px solid #dedede;
+padding: 10px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+margin: 10px
+}
+
+form.emailsignup {
+padding-left: 10px;
+}
+
+
+ul.schedule {
+list-style-image: url('../images/calendar_icon.png');
+margin: 20px 40px;
+}
+
+ul.schedule li {
+padding: 0px 0px 7px 0px;
+}
+
+	.sticker {
+	position:absolute;
+	top: 4px;
+	left: 405px;
+	}
+	
+	/*  =TABLES
+-------------------------------------------------------------- */
+table{border:1px solid #e0e0e0;margin: 10px;}
+th{background-color:#e0e0e0;}
+th, td{padding:18px 15px;}
+
+td {
+border-right: 1px solid #e0e0e0;
+}
+
+tr:nth-child(odd), tr.odd{background:#F8f8f8;}
+.smallTable td {font-size:10px;padding:5px; }
+.smallTable th {font-size:12px;padding:5px; }

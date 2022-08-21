@@ -1,0 +1,7 @@
+# Mac/OSX
+.DS_Store
+
+# Private Files
+*.webm
+*.mp4
+*.pdf
